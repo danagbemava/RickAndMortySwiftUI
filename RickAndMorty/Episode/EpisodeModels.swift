@@ -24,3 +24,15 @@ struct Episode : Codable {
         case url
     }
 }
+
+let dummyEpisode = Episode(
+    id: 1,
+    name: "Pilot",
+    airDate: "December 2, 2013",
+    episode: "S01E01",
+    characters: [
+        "https://rickandmortyapi.com/api/character/1",
+        "https://rickandmortyapi.com/api/character/2",
+    ],
+    url: "https://rickandmortyapi.com/api/episode/1"
+)

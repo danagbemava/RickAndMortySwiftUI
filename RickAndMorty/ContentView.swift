@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var selection = 0
+    
     var body: some View {
-        NavigationStack {
-            TabView {
+            TabView(selection: $selection) {
                 Text("Characters")
+                    .tag(0)
                     .tabItem {
                         Label(title: {
                             Text("Characters")
@@ -20,16 +23,24 @@ struct ContentView: View {
                         })
                     }
                 
-                Text("Episodes")
-                    .tabItem {
-                        Label(title: {
-                            Text("Episodes")
-                        }, icon: {
-                            Image(systemName: "e.circle")
-                        })
-                    }
+                NavigationStack {
+                    EpisodeView()
+                        .navigationTitle("Episodes")
+                        
+                }
+                .tag(1)
+                .tabItem {
+                    Label(title: {
+                        Text("Episodes")
+                    }, icon: {
+                        Image(systemName: "e.circle")
+                    })
+            }
                 
-                Text("Locations")
+                NavigationStack {
+                    LocationView()
+                        .navigationTitle("Locations")
+                }.tag(2)
                     .tabItem {
                         Label(title: {
                             Text("Locations")
@@ -39,6 +50,7 @@ struct ContentView: View {
                     }
                 
                 Text("Compare")
+                    .tag(3)
                     .tabItem {
                         Label(title: {
                             Text("Compare")
@@ -46,7 +58,20 @@ struct ContentView: View {
                             Image(systemName: "arrow.left.arrow.right")
                         })
                     }
-            }
+            }.navigationTitle(getNavigationTitle())
+    }
+    
+    // MARK : - private functions
+    
+    private func getNavigationTitle() -> String {
+        if selection == 0 {
+            return "Characters"
+        } else if selection == 1 {
+            return "Episodes"
+        } else if selection == 2 {
+            return "Locations"
+        } else {
+            return "Compare"
         }
     }
 }

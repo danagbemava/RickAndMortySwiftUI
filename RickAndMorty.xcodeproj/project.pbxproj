@@ -23,6 +23,10 @@
 		FA0CAD96296297FF00829673 /* CharacterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CAD95296297FF00829673 /* CharacterModels.swift */; };
 		FA0CAD982962990200829673 /* EpisodeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CAD972962990200829673 /* EpisodeModels.swift */; };
 		FA0CAD9F29629C3000829673 /* CharacterListViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CAD9E29629C3000829673 /* CharacterListViewStates.swift */; };
+		FA658A6329653AA500812E1A /* RMNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658A6229653AA500812E1A /* RMNetworkClient.swift */; };
+		FA658A662965406A00812E1A /* EpisodeNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658A652965406A00812E1A /* EpisodeNetworkProtocol.swift */; };
+		FA658A692965411400812E1A /* EpisodeNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658A682965411400812E1A /* EpisodeNetworkService.swift */; };
+		FA658A6B2965437D00812E1A /* EpisodeResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658A6A2965437D00812E1A /* EpisodeResponseModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,10 @@
 		FA0CAD95296297FF00829673 /* CharacterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModels.swift; sourceTree = "<group>"; };
 		FA0CAD972962990200829673 /* EpisodeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModels.swift; sourceTree = "<group>"; };
 		FA0CAD9E29629C3000829673 /* CharacterListViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewStates.swift; sourceTree = "<group>"; };
+		FA658A6229653AA500812E1A /* RMNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMNetworkClient.swift; sourceTree = "<group>"; };
+		FA658A652965406A00812E1A /* EpisodeNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeNetworkProtocol.swift; sourceTree = "<group>"; };
+		FA658A682965411400812E1A /* EpisodeNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeNetworkService.swift; sourceTree = "<group>"; };
+		FA658A6A2965437D00812E1A /* EpisodeResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeResponseModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +180,11 @@
 		FA0CAD8B2962961600829673 /* Episode */ = {
 			isa = PBXGroup;
 			children = (
+				FA658A67296540F600812E1A /* Services */,
+				FA658A642965405000812E1A /* Protocols */,
 				FA0CAD9929629A6E00829673 /* Views */,
 				FA0CAD972962990200829673 /* EpisodeModels.swift */,
+				FA658A6A2965437D00812E1A /* EpisodeResponseModels.swift */,
 			);
 			path = Episode;
 			sourceTree = "<group>";
@@ -182,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				FA0CAD912962971200829673 /* SharedModel.swift */,
+				FA658A6229653AA500812E1A /* RMNetworkClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -224,6 +236,22 @@
 				FA0CAD9E29629C3000829673 /* CharacterListViewStates.swift */,
 			);
 			path = States;
+			sourceTree = "<group>";
+		};
+		FA658A642965405000812E1A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA658A652965406A00812E1A /* EpisodeNetworkProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA658A67296540F600812E1A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA658A682965411400812E1A /* EpisodeNetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,14 +384,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA658A692965411400812E1A /* EpisodeNetworkService.swift in Sources */,
 				FA0A85CA296486840017BBC0 /* LocationItemView.swift in Sources */,
 				FA0CAD8E2962965000829673 /* LocationModels.swift in Sources */,
 				FA0A85C82964864D0017BBC0 /* LocationView.swift in Sources */,
+				FA658A6B2965437D00812E1A /* EpisodeResponseModels.swift in Sources */,
 				FA0CAD62296295BB00829673 /* ContentView.swift in Sources */,
 				FA0A85CC29648ECE0017BBC0 /* EpisodesView.swift in Sources */,
 				FA0CAD96296297FF00829673 /* CharacterModels.swift in Sources */,
 				FA0A85CE29648EE20017BBC0 /* EpisodeItemView.swift in Sources */,
+				FA658A662965406A00812E1A /* EpisodeNetworkProtocol.swift in Sources */,
 				FA0CAD60296295BB00829673 /* RickAndMortyApp.swift in Sources */,
+				FA658A6329653AA500812E1A /* RMNetworkClient.swift in Sources */,
 				FA0CAD922962971200829673 /* SharedModel.swift in Sources */,
 				FA0CAD982962990200829673 /* EpisodeModels.swift in Sources */,
 				FA0CAD9F29629C3000829673 /* CharacterListViewStates.swift in Sources */,

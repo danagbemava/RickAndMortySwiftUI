@@ -26,4 +26,5 @@ enum ApiError : String, Error {
     case networkError = "There is an issue with your network. Kindly check your network connection and try again"
     case unexpectedError = "An unexpected error occurred. Please try again later"
     case rateLimitError = "Too many requests. Please try again in 24 hours"
+    case invalidURLError = "The url provided is not valid. Please check and try again"
 }

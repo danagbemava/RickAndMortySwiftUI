@@ -9,9 +9,10 @@ import SwiftUI
 
 struct EpisodeItemView: View {
     
-    // Mark : - Properties
+    // Mark: - Properties
     var episode: Episode
-    // Mark : - View begins
+    
+    // Mark: - View begins
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Title: \(episode.name)")

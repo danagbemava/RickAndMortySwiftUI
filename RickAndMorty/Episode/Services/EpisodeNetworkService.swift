@@ -20,7 +20,7 @@ class EpisodeNetworkService : EpisodeNetworkProtocol {
                 throw ApiError.invalidURLError
             }
             
-            let response: EpisodeListResponseModel? = try await RMNetworkClient.performGet(for: url)
+            let response: ListResponseModel<Episode>? = try await RMNetworkClient.performGet(for: url)
             
             guard let response = response else {
                 throw ApiError.unexpectedError

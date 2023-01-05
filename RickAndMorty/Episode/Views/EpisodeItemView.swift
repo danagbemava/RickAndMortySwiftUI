@@ -14,13 +14,16 @@ struct EpisodeItemView: View {
     
     // Mark: - View begins
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("Title: \(episode.name)")
-            Text("Episode number: \(episode.episode)")
+        NavigationLink(destination: Text("Dummmy Destination")) {
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Title: \(episode.name)")
+                Text("Episode number: \(episode.episode)")
+            }
+            .padding(8)
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            .padding(8)
         }
-        .padding(8)
-        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-        
+        .buttonStyle(.plain)
     }
 }
 

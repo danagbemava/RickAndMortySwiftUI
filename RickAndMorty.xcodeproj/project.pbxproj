@@ -23,6 +23,11 @@
 		FA0CAD96296297FF00829673 /* CharacterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CAD95296297FF00829673 /* CharacterModels.swift */; };
 		FA0CAD982962990200829673 /* EpisodeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CAD972962990200829673 /* EpisodeModels.swift */; };
 		FA0CAD9F29629C3000829673 /* CharacterListViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CAD9E29629C3000829673 /* CharacterListViewStates.swift */; };
+		FA21F932296710B500F005A4 /* LocationNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21F931296710B500F005A4 /* LocationNetworkProtocol.swift */; };
+		FA21F9352967114200F005A4 /* CharacterNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21F9342967114200F005A4 /* CharacterNetworkProtocol.swift */; };
+		FA21F9372967118900F005A4 /* LocationNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21F9362967118900F005A4 /* LocationNetworkService.swift */; };
+		FA21F93A296712D800F005A4 /* CharacterNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21F939296712D800F005A4 /* CharacterNetworkService.swift */; };
+		FA21F93D2967153600F005A4 /* EpisodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21F93C2967153600F005A4 /* EpisodesViewModel.swift */; };
 		FA658A6329653AA500812E1A /* RMNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658A6229653AA500812E1A /* RMNetworkClient.swift */; };
 		FA658A662965406A00812E1A /* EpisodeNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658A652965406A00812E1A /* EpisodeNetworkProtocol.swift */; };
 		FA658A692965411400812E1A /* EpisodeNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658A682965411400812E1A /* EpisodeNetworkService.swift */; };
@@ -66,6 +71,11 @@
 		FA0CAD95296297FF00829673 /* CharacterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModels.swift; sourceTree = "<group>"; };
 		FA0CAD972962990200829673 /* EpisodeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModels.swift; sourceTree = "<group>"; };
 		FA0CAD9E29629C3000829673 /* CharacterListViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewStates.swift; sourceTree = "<group>"; };
+		FA21F931296710B500F005A4 /* LocationNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNetworkProtocol.swift; sourceTree = "<group>"; };
+		FA21F9342967114200F005A4 /* CharacterNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterNetworkProtocol.swift; sourceTree = "<group>"; };
+		FA21F9362967118900F005A4 /* LocationNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNetworkService.swift; sourceTree = "<group>"; };
+		FA21F939296712D800F005A4 /* CharacterNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterNetworkService.swift; sourceTree = "<group>"; };
+		FA21F93C2967153600F005A4 /* EpisodesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewModel.swift; sourceTree = "<group>"; };
 		FA658A6229653AA500812E1A /* RMNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMNetworkClient.swift; sourceTree = "<group>"; };
 		FA658A652965406A00812E1A /* EpisodeNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeNetworkProtocol.swift; sourceTree = "<group>"; };
 		FA658A682965411400812E1A /* EpisodeNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeNetworkService.swift; sourceTree = "<group>"; };
@@ -160,6 +170,8 @@
 		FA0CAD892962960500829673 /* Character */ = {
 			isa = PBXGroup;
 			children = (
+				FA21F938296712CB00F005A4 /* Services */,
+				FA21F9332967112B00F005A4 /* Protocols */,
 				FA0CAD9D29629C0C00829673 /* States */,
 				FA0CAD9C29629BEA00829673 /* ViewModels */,
 				FA0CAD9B29629A7700829673 /* Views */,
@@ -171,6 +183,8 @@
 		FA0CAD8A2962960F00829673 /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				FA21F930296710A600F005A4 /* Services */,
+				FA21F92F2967109600F005A4 /* Protocols */,
 				FA0CAD9A29629A7300829673 /* Views */,
 				FA0CAD8D2962965000829673 /* LocationModels.swift */,
 			);
@@ -180,6 +194,7 @@
 		FA0CAD8B2962961600829673 /* Episode */ = {
 			isa = PBXGroup;
 			children = (
+				FA21F93B2967152800F005A4 /* ViewModels */,
 				FA658A67296540F600812E1A /* Services */,
 				FA658A642965405000812E1A /* Protocols */,
 				FA0CAD9929629A6E00829673 /* Views */,
@@ -236,6 +251,46 @@
 				FA0CAD9E29629C3000829673 /* CharacterListViewStates.swift */,
 			);
 			path = States;
+			sourceTree = "<group>";
+		};
+		FA21F92F2967109600F005A4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA21F931296710B500F005A4 /* LocationNetworkProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA21F930296710A600F005A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA21F9362967118900F005A4 /* LocationNetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA21F9332967112B00F005A4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA21F9342967114200F005A4 /* CharacterNetworkProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA21F938296712CB00F005A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA21F939296712D800F005A4 /* CharacterNetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA21F93B2967152800F005A4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FA21F93C2967153600F005A4 /* EpisodesViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FA658A642965405000812E1A /* Protocols */ = {
@@ -385,17 +440,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA658A692965411400812E1A /* EpisodeNetworkService.swift in Sources */,
+				FA21F9372967118900F005A4 /* LocationNetworkService.swift in Sources */,
 				FA0A85CA296486840017BBC0 /* LocationItemView.swift in Sources */,
 				FA0CAD8E2962965000829673 /* LocationModels.swift in Sources */,
 				FA0A85C82964864D0017BBC0 /* LocationView.swift in Sources */,
+				FA21F93A296712D800F005A4 /* CharacterNetworkService.swift in Sources */,
+				FA21F93D2967153600F005A4 /* EpisodesViewModel.swift in Sources */,
 				FA658A6B2965437D00812E1A /* EpisodeResponseModels.swift in Sources */,
 				FA0CAD62296295BB00829673 /* ContentView.swift in Sources */,
+				FA21F9352967114200F005A4 /* CharacterNetworkProtocol.swift in Sources */,
 				FA0A85CC29648ECE0017BBC0 /* EpisodesView.swift in Sources */,
 				FA0CAD96296297FF00829673 /* CharacterModels.swift in Sources */,
 				FA0A85CE29648EE20017BBC0 /* EpisodeItemView.swift in Sources */,
 				FA658A662965406A00812E1A /* EpisodeNetworkProtocol.swift in Sources */,
 				FA0CAD60296295BB00829673 /* RickAndMortyApp.swift in Sources */,
 				FA658A6329653AA500812E1A /* RMNetworkClient.swift in Sources */,
+				FA21F932296710B500F005A4 /* LocationNetworkProtocol.swift in Sources */,
 				FA0CAD922962971200829673 /* SharedModel.swift in Sources */,
 				FA0CAD982962990200829673 /* EpisodeModels.swift in Sources */,
 				FA0CAD9F29629C3000829673 /* CharacterListViewStates.swift in Sources */,

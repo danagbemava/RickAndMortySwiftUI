@@ -15,3 +15,10 @@ struct Location : Codable {
     var residents: [String]?
     var url: String
 }
+
+
+struct LocationListResponseModel : Codable {
+    
+    var info: Info
+    var results: [Location]
+}

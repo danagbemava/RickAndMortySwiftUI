@@ -32,6 +32,11 @@
 		FA658A662965406A00812E1A /* EpisodeNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658A652965406A00812E1A /* EpisodeNetworkProtocol.swift */; };
 		FA658A692965411400812E1A /* EpisodeNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658A682965411400812E1A /* EpisodeNetworkService.swift */; };
 		FA658A6B2965437D00812E1A /* EpisodeResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658A6A2965437D00812E1A /* EpisodeResponseModels.swift */; };
+		FAB692E22967DEE5008322CF /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB692E12967DEE5008322CF /* LocationListViewModel.swift */; };
+		FAB692E42967E4AD008322CF /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB692E32967E4AD008322CF /* CharacterListView.swift */; };
+		FAB692E82967E506008322CF /* ComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB692E72967E506008322CF /* ComparisonView.swift */; };
+		FAB692EA2967E5A0008322CF /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB692E92967E5A0008322CF /* LocationDetailView.swift */; };
+		FAB692EC2967EB2F008322CF /* EpisodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB692EB2967EB2F008322CF /* EpisodeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +85,11 @@
 		FA658A652965406A00812E1A /* EpisodeNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeNetworkProtocol.swift; sourceTree = "<group>"; };
 		FA658A682965411400812E1A /* EpisodeNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeNetworkService.swift; sourceTree = "<group>"; };
 		FA658A6A2965437D00812E1A /* EpisodeResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeResponseModels.swift; sourceTree = "<group>"; };
+		FAB692E12967DEE5008322CF /* LocationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
+		FAB692E32967E4AD008322CF /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		FAB692E72967E506008322CF /* ComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparisonView.swift; sourceTree = "<group>"; };
+		FAB692E92967E5A0008322CF /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		FAB692EB2967EB2F008322CF /* EpisodeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +140,7 @@
 		FA0CAD5E296295BB00829673 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				FAB692E52967E4EB008322CF /* Compare */,
 				FA0CAD8C2962963100829673 /* Network */,
 				FA0CAD8B2962961600829673 /* Episode */,
 				FA0CAD8A2962960F00829673 /* Location */,
@@ -183,6 +194,7 @@
 		FA0CAD8A2962960F00829673 /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				FAB692E02967DED1008322CF /* ViewModels */,
 				FA21F930296710A600F005A4 /* Services */,
 				FA21F92F2967109600F005A4 /* Protocols */,
 				FA0CAD9A29629A7300829673 /* Views */,
@@ -218,6 +230,7 @@
 			children = (
 				FA0A85CB29648ECE0017BBC0 /* EpisodesView.swift */,
 				FA0A85CD29648EE20017BBC0 /* EpisodeItemView.swift */,
+				FAB692EB2967EB2F008322CF /* EpisodeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +240,7 @@
 			children = (
 				FA0A85C72964864D0017BBC0 /* LocationView.swift */,
 				FA0A85C9296486840017BBC0 /* LocationItemView.swift */,
+				FAB692E92967E5A0008322CF /* LocationDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +248,7 @@
 		FA0CAD9B29629A7700829673 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FAB692E32967E4AD008322CF /* CharacterListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +322,30 @@
 				FA658A682965411400812E1A /* EpisodeNetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FAB692E02967DED1008322CF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FAB692E12967DEE5008322CF /* LocationListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FAB692E52967E4EB008322CF /* Compare */ = {
+			isa = PBXGroup;
+			children = (
+				FAB692E62967E4F4008322CF /* Views */,
+			);
+			path = Compare;
+			sourceTree = "<group>";
+		};
+		FAB692E62967E4F4008322CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAB692E72967E506008322CF /* ComparisonView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,7 +478,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB692E42967E4AD008322CF /* CharacterListView.swift in Sources */,
 				FA658A692965411400812E1A /* EpisodeNetworkService.swift in Sources */,
+				FAB692EA2967E5A0008322CF /* LocationDetailView.swift in Sources */,
 				FA21F9372967118900F005A4 /* LocationNetworkService.swift in Sources */,
 				FA0A85CA296486840017BBC0 /* LocationItemView.swift in Sources */,
 				FA0CAD8E2962965000829673 /* LocationModels.swift in Sources */,
@@ -448,6 +489,7 @@
 				FA21F93D2967153600F005A4 /* EpisodesViewModel.swift in Sources */,
 				FA658A6B2965437D00812E1A /* EpisodeResponseModels.swift in Sources */,
 				FA0CAD62296295BB00829673 /* ContentView.swift in Sources */,
+				FAB692E22967DEE5008322CF /* LocationListViewModel.swift in Sources */,
 				FA21F9352967114200F005A4 /* CharacterNetworkProtocol.swift in Sources */,
 				FA0A85CC29648ECE0017BBC0 /* EpisodesView.swift in Sources */,
 				FA0CAD96296297FF00829673 /* CharacterModels.swift in Sources */,
@@ -457,7 +499,9 @@
 				FA658A6329653AA500812E1A /* RMNetworkClient.swift in Sources */,
 				FA21F932296710B500F005A4 /* LocationNetworkProtocol.swift in Sources */,
 				FA0CAD922962971200829673 /* SharedModel.swift in Sources */,
+				FAB692E82967E506008322CF /* ComparisonView.swift in Sources */,
 				FA0CAD982962990200829673 /* EpisodeModels.swift in Sources */,
+				FAB692EC2967EB2F008322CF /* EpisodeDetailView.swift in Sources */,
 				FA0CAD9F29629C3000829673 /* CharacterListViewStates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

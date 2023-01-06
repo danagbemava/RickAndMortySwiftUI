@@ -12,6 +12,7 @@ struct EpisodeView: View {
     // Mark : -  properties
     @EnvironmentObject private var vm: EpisodesViewModel
     
+    // Mark : - body
     var body: some View {
         ScrollView {
             
@@ -46,7 +47,7 @@ struct EpisodeView: View {
         }
     }
     
-    // Mark :- Methods
+    // Mark : - Methods
     func retry() async -> Void {
         await vm.getEpisodes()
     }

@@ -14,7 +14,7 @@ struct EpisodeItemView: View {
     
     // Mark: - View begins
     var body: some View {
-        NavigationLink(destination: Text("Dummmy Destination")) {
+        NavigationLink(destination: EpisodeDetailView(episode: episode)) {
             VStack(alignment: .leading, spacing: 10) {
                 Text("Title: \(episode.name)")
                 Text("Episode number: \(episode.episode)")

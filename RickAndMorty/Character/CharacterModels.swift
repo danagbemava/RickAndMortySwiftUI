@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Character : Codable {
+struct Character : Codable, Hashable {
     var id: Int
     var name: String
     var status: String
@@ -22,7 +22,26 @@ struct Character : Codable {
 }
 
 
-struct Origin : Codable {
+struct Origin : Codable, Hashable {
     var name: String
     var url: String
 }
+
+let dummyOrigin = Origin(name: "Earth", url: "https://rickandmortyapi.com/api/location/1")
+
+let dummyCharacter = Character(
+    id: 1,
+    name: "Rich Sanchez",
+    status: "Alive",
+    species: "Human",
+    type: "",
+    gender: "Male",
+    origin: dummyOrigin,
+    location: dummyLocation,
+    image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    episode: [
+        "https://rickandmortyapi.com/api/episode/1",
+        "https://rickandmortyapi.com/api/episode/2",
+    ],
+    url: "https://rickandmortyapi.com/api/character/1"
+)

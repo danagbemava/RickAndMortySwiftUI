@@ -11,11 +11,13 @@ import SwiftUI
 struct RickAndMortyApp: App {
     
     @StateObject var episodesVM = EpisodesViewModel()
+    @StateObject var locationsVM = LocationListViewModel()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(episodesVM)
+                .environmentObject(locationsVM)
         }
     }
 }

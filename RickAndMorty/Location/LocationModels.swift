@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Location : Codable {
+struct Location : Codable, Hashable {
     var id: Int?
     var name: String
     var type: String?
@@ -22,3 +22,5 @@ struct LocationListResponseModel : Codable {
     var info: Info
     var results: [Location]
 }
+
+let dummyLocation = Location(name: "Earth", url: "https://rickandmortyapi.com/api/location/20")

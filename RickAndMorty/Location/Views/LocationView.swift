@@ -8,14 +8,42 @@
 import SwiftUI
 
 struct LocationView: View {
+    
+    @EnvironmentObject var vm : LocationListViewModel
+    
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(1..<10, id:\.self) { _ in
-                    LocationItemView(location: Location(name: "Planet 1", url: "https://rickandmortyapi.com/api/location/3"))
+        Group {
+            
+            switch vm.screenState {
+                
+            case .loading:
+                VStack(alignment: .center) {
+                    ProgressView()
+                }
+            case .error(let error):
+                VStack(alignment: .center, spacing: 20) {
+                    Text(error)
+                    
+                    Button("Retry") {
+                        Task {
+                            
+                        }
+                    }
+                }
+            case .success(let locations):
+                ScrollView {
+                    LazyVStack {
+                        ForEach(locations, id:\.self) { location in
+                            LocationItemView(location: location)
+                        }
+                    }
                 }
             }
+            
+        }.task {
+            await vm.getLocations()
         }
+        
     }
 }
 

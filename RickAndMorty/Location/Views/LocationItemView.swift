@@ -16,20 +16,24 @@ struct LocationItemView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(location.name)
-                .font(.system(size: 20))
-                .bold()
-            
-            Text(location.url)
+        NavigationLink(destination: LocationDetailView(currentLocation: location)) {
+            VStack(alignment: .leading, spacing: 10) {
+                Text(location.name)
+                    .font(.system(size: 20))
+                    .bold()
+                
+                Text(location.url)
+            }
+            .padding(8)
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            .padding(8)
         }
-        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-        .padding(8)
+        .buttonStyle(.plain)
     }
 }
 
 struct LocationItemView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationItemView(location: Location(name: "Name", url: "https://"))
+        LocationItemView(location: dummyLocation)
     }
 }

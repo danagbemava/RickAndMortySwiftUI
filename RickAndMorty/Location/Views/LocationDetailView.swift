@@ -40,9 +40,11 @@ struct LocationDetailView: View {
                     Text("Characters")
                         .font(.title)
                     
-                    VStack(spacing: 10) {
-                        ForEach(1..<10, id: \.self) { _ in
-                            Text(dummyCharacter.name)
+                    if (currentLocation.residents != nil) {
+                        VStack(alignment: .leading,  spacing: 10) {
+                            ForEach(currentLocation.residents!, id: \.self) { resident in
+                                Text(resident)
+                            }
                         }
                     }
                 }

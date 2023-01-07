@@ -14,8 +14,7 @@ struct EpisodeView: View {
     
     // Mark : - body
     var body: some View {
-        ScrollView {
-            
+        Group {
             switch vm.screenState {
                 
             case .error(let error):
@@ -24,7 +23,7 @@ struct EpisodeView: View {
                     
                     Button("Retry") {
                         Task {
-                           await retry()
+                            await retry()
                         }
                         
                     }
@@ -34,14 +33,14 @@ struct EpisodeView: View {
                     ProgressView()
                 }
             case .success(let data):
-                LazyVStack {
-                    ForEach(data, id: \.self) { episode in
-                        EpisodeItemView(episode: episode)
+                ScrollView {
+                    LazyVStack {
+                        ForEach(data, id: \.self) { episode in
+                            EpisodeItemView(episode: episode)
+                        }
                     }
                 }
             }
-            
-            
         }.task {
             await vm.getEpisodes()
         }

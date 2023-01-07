@@ -15,9 +15,22 @@ struct EpisodeDetailView: View {
     
     // Mark :- Body
     var body: some View {
-        VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                GroupedText(title: "Name", text: episode.name)
+                GroupedText(title: "Air Date", text: episode.airDate)
+                
+                Text("Characters")
+                    .font(.headline)
+                
+                ForEach(episode.characters, id: \.self) { character in
+                    Text(character)
+                }
+                
+            }
+            
         }
+        .frame(minWidth: 0, maxWidth: .infinity)
         .navigationTitle(episode.episode)
     }
 }
@@ -25,5 +38,19 @@ struct EpisodeDetailView: View {
 struct EpisodeDetailView_Previews: PreviewProvider {
     static var previews: some View {
         EpisodeDetailView(episode: dummyEpisode)
+    }
+}
+
+struct GroupedText: View {
+    
+    var title: String
+    var text: String
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(title)
+                .font(.headline)
+            Text(text)
+        }
     }
 }

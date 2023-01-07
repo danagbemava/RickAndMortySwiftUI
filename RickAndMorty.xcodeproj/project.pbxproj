@@ -23,6 +23,8 @@
 		FA0CAD96296297FF00829673 /* CharacterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CAD95296297FF00829673 /* CharacterModels.swift */; };
 		FA0CAD982962990200829673 /* EpisodeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CAD972962990200829673 /* EpisodeModels.swift */; };
 		FA0CAD9F29629C3000829673 /* CharacterListViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CAD9E29629C3000829673 /* CharacterListViewStates.swift */; };
+		FA1854B4296A0DFD0024B3F0 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1854B3296A0DFD0024B3F0 /* CharacterView.swift */; };
+		FA1854B6296A14EB0024B3F0 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1854B5296A14EB0024B3F0 /* CharacterDetailView.swift */; };
 		FA21F932296710B500F005A4 /* LocationNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21F931296710B500F005A4 /* LocationNetworkProtocol.swift */; };
 		FA21F9352967114200F005A4 /* CharacterNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21F9342967114200F005A4 /* CharacterNetworkProtocol.swift */; };
 		FA21F9372967118900F005A4 /* LocationNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21F9362967118900F005A4 /* LocationNetworkService.swift */; };
@@ -76,6 +78,8 @@
 		FA0CAD95296297FF00829673 /* CharacterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModels.swift; sourceTree = "<group>"; };
 		FA0CAD972962990200829673 /* EpisodeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModels.swift; sourceTree = "<group>"; };
 		FA0CAD9E29629C3000829673 /* CharacterListViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewStates.swift; sourceTree = "<group>"; };
+		FA1854B3296A0DFD0024B3F0 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		FA1854B5296A14EB0024B3F0 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		FA21F931296710B500F005A4 /* LocationNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNetworkProtocol.swift; sourceTree = "<group>"; };
 		FA21F9342967114200F005A4 /* CharacterNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterNetworkProtocol.swift; sourceTree = "<group>"; };
 		FA21F9362967118900F005A4 /* LocationNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNetworkService.swift; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				FAB692E32967E4AD008322CF /* CharacterListView.swift */,
+				FA1854B3296A0DFD0024B3F0 /* CharacterView.swift */,
+				FA1854B5296A14EB0024B3F0 /* CharacterDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -482,6 +488,7 @@
 				FA658A692965411400812E1A /* EpisodeNetworkService.swift in Sources */,
 				FAB692EA2967E5A0008322CF /* LocationDetailView.swift in Sources */,
 				FA21F9372967118900F005A4 /* LocationNetworkService.swift in Sources */,
+				FA1854B4296A0DFD0024B3F0 /* CharacterView.swift in Sources */,
 				FA0A85CA296486840017BBC0 /* LocationItemView.swift in Sources */,
 				FA0CAD8E2962965000829673 /* LocationModels.swift in Sources */,
 				FA0A85C82964864D0017BBC0 /* LocationView.swift in Sources */,
@@ -495,6 +502,7 @@
 				FA0CAD96296297FF00829673 /* CharacterModels.swift in Sources */,
 				FA0A85CE29648EE20017BBC0 /* EpisodeItemView.swift in Sources */,
 				FA658A662965406A00812E1A /* EpisodeNetworkProtocol.swift in Sources */,
+				FA1854B6296A14EB0024B3F0 /* CharacterDetailView.swift in Sources */,
 				FA0CAD60296295BB00829673 /* RickAndMortyApp.swift in Sources */,
 				FA658A6329653AA500812E1A /* RMNetworkClient.swift in Sources */,
 				FA21F932296710B500F005A4 /* LocationNetworkProtocol.swift in Sources */,
